@@ -1,1 +1,0 @@
-# ai-telegram-trading-bot
