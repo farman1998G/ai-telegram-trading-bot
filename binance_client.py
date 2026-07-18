@@ -1,11 +1,10 @@
-from binance.client import Client
-import os
-
-API_KEY = os.getenv("BINANCE_API_KEY")
-API_SECRET = os.getenv("BINANCE_API_SECRET")
-
-client = Client(API_KEY, API_SECRET)
+import requests
 
 def get_price(symbol="BTCUSDT"):
-    ticker = client.get_symbol_ticker(symbol=symbol)
-    return float(ticker["price"])
+    url = f"https://api.binance.com/api/v3/ticker/price?symbol={symbol}"
+
+    response = requests.get(url, timeout=10)
+    response.raise_for_status()
+
+    data = response.json()
+    return float(data["price"])
