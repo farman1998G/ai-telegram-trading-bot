@@ -3,5 +3,3 @@ python-binance==1.0.19
 openai>=1.30.0
 python-dotenv==1.0.1
 requests==2.31.0
-numpy==2.1.1
-pandas==2.2.2
