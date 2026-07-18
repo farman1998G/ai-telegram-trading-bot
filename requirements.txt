@@ -1,0 +1,4 @@
+python-telegram-bot==22.1
+openai==1.97.1
+requests==2.32.4
+python-dotenv==1.1.1
